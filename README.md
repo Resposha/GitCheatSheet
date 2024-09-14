@@ -220,7 +220,7 @@ Git хранит таблицу соответствий `хеш → инфор�
 
 ## Статусы файлов в Git
 
-### *Untracked* (англ. «неотслеживаемый»)
+### Untracked (англ. «неотслеживаемый»)
 
 Git «видит», что такой файл существует, но не следит за изменениями в нём. У `untracked`-файла нет предыдущих версий, зафиксированных в коммитах или через команду `git add`.
 
@@ -253,11 +253,11 @@ Git «видит», что такой файл существует, но не �
 
 ```mermaid
 graph LR;
-  untracked -- "git add" --> staged (+ tracked)
-  staged -- "modifications" --> modified (+ tracked)
-  modified -- "git add" --> staged (+ tracked)
-  staged -- "git commit -m" --> tracked
-  tracked -- "modifications" --> modified (+ tracked)
-  modified -- "git add" --> staged (+ tracked)
-  staged -- "git commit -m" --> tracked
+  untracked -- "git add" --> staged (+ tracked);
+  staged -- "modifications" --> modified (+ tracked);
+  modified -- "git add" --> staged (+ tracked);
+  staged -- "git commit -m" --> tracked;
+  tracked -- "modifications" --> modified (+ tracked);
+  modified -- "git add" --> staged (+ tracked);
+  staged -- "git commit -m" --> tracked;
 ``` 
