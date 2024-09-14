@@ -251,13 +251,10 @@ Git «видит», что такой файл существует, но не �
 6. Сделали коммит. Состояния: `tracked`.
 7. Повторили пункты 4−7 много-много раз.
 
-```mermaid
-graph LR;
-  untracked -- "git add" --> staged (+ tracked);
-  staged -- "modifications" --> modified (+ tracked);
-  modified -- "git add" --> staged (+ tracked);
-  staged -- "git commit -m" --> tracked;
-  tracked -- "modifications" --> modified (+ tracked);
-  modified -- "git add" --> staged (+ tracked);
-  staged -- "git commit -m" --> tracked;
-``` 
+* `untracked` -- git add` --> `staged` (+ `tracked`)
+* `staged` -- *modifications* --> `modified` (+ `tracked`)
+* `modified` -- `git add` --> `staged` (+ `tracked`)
+* `staged` -- `git commit -m` --> `tracked`
+* `tracked` -- *modifications* --> `modified` (+ `tracked`)
+* `modified` -- `git add` --> `staged` (+ `tracked`)
+* `staged` -- `git commit -m` --> `tracked`
